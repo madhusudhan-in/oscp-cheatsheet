@@ -126,6 +126,7 @@ kali@kali:~$ hydra -L users.txt -P passwords.txt <IP> ftp
 ```shell
 # Netcat (checks for version too)
 kali@kali:~$ nc -nv <IP> 25
+use command such as VRFY (user verification) and EXPN (to asks the server for the membership of a mailing list).
 
 # Identify/Verify existing users
 VRFY root
