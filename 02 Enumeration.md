@@ -69,6 +69,7 @@ C:\Users\offsec> net view \\<ComputerName/IP> /all
 # -U to get userlist and -O to get OS information
 kali@kali:~$ enum4linux -U -o <IP>
 Bash Script: while read ip; do enum4linux "$ip"; done < ./enum.txt
+(cat enum.txt | xargs -n1 -P4 enum4linux)
 
 # Crackmapexec
 kali@kali:~$ crackmapexec smb <IP/Range>
