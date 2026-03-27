@@ -29,7 +29,7 @@ kali@kali:~$ sudo nmap --script="name" <IP>
 PS C:\Users\offsec> Test-NetConnection -Port <port> <IP>
 
 # Automated Port Scan (first 1024 ports)
-1..1024 | % {echo ((New-Object Net.Sockets.TcpClient).Connect("IP", $_)) "TCP port $_ is open"} 2>$null
+1..1024 | % {echo ((New-Object Net.Sockets.TcpClient).Connect("IP-Here", $_)) "TCP port $_ is open"} 2>$null
 ```
 ## DNS
 ```shell
