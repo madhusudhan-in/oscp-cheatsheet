@@ -150,6 +150,10 @@ kali@kali:~$ snmpcheck -t <IP> -c public
 
 # Onesixtyone
 kali@kali:~$ onesixtyone -c community -i ips
+echo public > community
+echo private >> community
+echo manager >> community
+for ip in $(seq 1 254); do echo 192.168.1.$ip; done > ips
 # community is a txt file with "public", "private", "manager"
 # ips is a txt file with the target IPs
 
